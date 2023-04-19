@@ -1,0 +1,22 @@
+.avatar-box{
+    display: flex;
+    align-items: center;
+}
+
+.avatar-navbar-img{
+    width: 20%;
+}
+.avatar-comment-img{
+    width: 10%;
+}
+.avatar-detail-img{
+    width: 10%;
+}
+
+.hidden-box{
+    display: none;
+}
+
+.drop-box{
+    margin-left: 5%;
+}
