@@ -6,7 +6,7 @@ import './Avatar.css';
 
 function Avatar(props) {
     const logout = () =>{
-        navigate('/logout');
+        navigate('/login');
         localStorage.setItem('page','login');
     }
     const items = [
@@ -35,7 +35,8 @@ function Avatar(props) {
   const {getSonMsg} = props;
   return (
     <div className='avatar-box'>
-        <img src={user.avatar} alt="Avatar" className={avatarClass} onClick={onClick}/>
+        <img src={user.avatar} alt="Avatar" className={avatarClass} onClick={props.status === 1 ? onClick : null}/>
+        {props.status === 3 ? <div>{props.title}</div> : <div style={{display : 'none'}}></div>}
         <div className={props.status === 1 ? 'drop-box' : 'hidden-box'}>
             <Dropdown
                 menu={{

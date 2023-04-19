@@ -7,6 +7,7 @@ import {
   Outlet
 } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
+import Home from 'pages/home/Home';
 
 function Layout(){
     return (
@@ -14,7 +15,7 @@ function Layout(){
           <div>
             <Navbar/>
           </div>
-          <div>
+          <div style={{margin : 35}}>
             <Outlet/>
           </div>
         </div>
@@ -28,7 +29,7 @@ function App() {
           <Routes>
             <Route path='/login'></Route>
             <Route path='/' element={<Layout/>}>
-              <Route path=''></Route>
+              <Route path='' element={<Home/>}></Route>
               <Route path='info'></Route>
               <Route path='personal'></Route>
               <Route path='message'></Route>

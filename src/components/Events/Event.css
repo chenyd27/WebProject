@@ -1,0 +1,23 @@
+.sortBar{
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search-box{
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+.search-input{
+    margin-left: 2%;
+}
+.tag-show{
+    margin-left: 2%;
+}
+.sort-box{
+    display: flex;
+}
+.cardList{
+    margin-top: 1%;
+}

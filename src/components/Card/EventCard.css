@@ -1,0 +1,36 @@
+p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+img{
+    width: 30%;
+    height: auto;
+    margin-right: 3%;
+}
+.card-body{
+    display: flex;
+    align-items: center;
+}
+.bottomTag{
+    display: flex;
+    justify-content: space-between;
+}
+.left-bottom-box{
+    display: flex;
+}
+.delete-hidden{
+    display: none;
+}
+.delete-box{
+    color: red;
+}
+.like-comment-box{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.like-box{
+    margin-right: 10px;
+}
