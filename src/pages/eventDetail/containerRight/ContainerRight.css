@@ -1,0 +1,22 @@
+.content-box{
+    margin-top: 5%;
+    display: block;
+    height: auto;
+    overflow: visible;
+}
+.like-share{
+    display: flex;  
+    margin-top: 5%; 
+}
+.like{
+    margin-right: 30px;
+}
+.comment-input{
+    margin-top: 2%;
+}
+.submit-cancel{
+    margin-top: 2%;
+}
+.comment-card{
+    margin-top: 12%;
+}

@@ -3,15 +3,15 @@ import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     user : {
-        username : 'unknown User',
+        username : 'cyd',
         //password : '',
         token : '',
-        userId : '',
-        email : '',
-        first_name : '',
-        last_name : '',
-        phone : '',
-        create_at : '',
+        user_id : 1,
+        email : 'yic192@pitt.edu',
+        first_name : 'Yida',
+        last_name : 'Chen',
+        phone : '4123542755',
+        create_at : '2023-04-18 18:00:00',
         update_at : '',
         avatar : 'http://localhost:3000/assets/touxiang.png',
         user_type : 1,

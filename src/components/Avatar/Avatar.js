@@ -22,8 +22,10 @@ function Avatar(props) {
     avatarClass = "avatar-navbar-img";
   }else if(props.status === 2){
     avatarClass = "avatar-comment-img";
-  }else{
+  }else if(props.status === 3){
     avatarClass = "avatar-detail-img";
+  }else{
+    avatarClass = "avatar-event-info-img";
   }
   const navigate = useNavigate();
   const onClick = () =>{
@@ -36,7 +38,9 @@ function Avatar(props) {
   return (
     <div className='avatar-box'>
         <img src={user.avatar} alt="Avatar" className={avatarClass} onClick={props.status === 1 ? onClick : null}/>
-        {props.status === 3 ? <div>{props.title}</div> : <div style={{display : 'none'}}></div>}
+        {props.status === 3 || props.status === 2 ? <div>{props.title}</div> : <div style={{display : 'none'}}></div>}
+        {props.status === 2 ? <div style={{marginLeft : 30,fontSize : 10,color : '#7B8FA1'}}>{props.create_time}</div>  : <div style={{display : 'none'}}></div>}
+        {props.status === 4 ? <div style={{fontSize : 30,fontWeight : 'bolder'}}>{props.title}</div> : <div style={{display : 'none'}}></div>}
         <div className={props.status === 1 ? 'drop-box' : 'hidden-box'}>
             <Dropdown
                 menu={{

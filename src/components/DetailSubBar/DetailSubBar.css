@@ -1,0 +1,47 @@
+.first-line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.second-line{
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 8%;
+    color: #7C96AB;
+    margin-top: 5px;
+}
+.user-box{
+    display: flex;
+    align-items: center;
+}
+.username{
+    margin-left: 10px;
+}
+.time-box{
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+}
+.third-line{
+    margin-top: 15px;
+    margin-left: 8%;
+    display: flex;
+    justify-content: space-between;
+}
+.operation-box{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.update-box{
+    color:dodgerblue;
+}
+.delete-box{
+    margin-left: 20px;
+}
+.hidden{
+    display: none;
+}
+.taglist{
+    margin-left: 40px;
+}

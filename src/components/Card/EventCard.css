@@ -25,6 +25,7 @@ img{
 }
 .delete-box{
     color: red;
+    font-size: 20px;
 }
 .like-comment-box{
     display: flex;
@@ -32,5 +33,7 @@ img{
     margin-left: 10px;
 }
 .like-box{
-    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
 }

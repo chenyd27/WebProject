@@ -22,7 +22,7 @@ function EventCard(props){
         <div style={{margin : 10}} onClick={jumptoDetail}>
             <Card
             size="small"
-            title={<Avatar user={event.user} status={3} title={event.title}/>}
+            title={status === 'home' ? <Avatar user={event.user} status={3} title={event.title}/> : event.title}
             extra={event.createAt}
             style={{
                 width: '100%',
@@ -37,13 +37,12 @@ function EventCard(props){
                         {event.tagList.map((tag,index)=><Tag key={tag} color={colorList[index]}>{tag}</Tag>)}
                     </div>
                     <div className='left-bottom-box'>
-                        <a className={status === 'home' ? 'delete-hidden' : 'delete-box'} onClick={deleteEvent}>delete</a>
                         <div className="like-comment-box">
                             <div className="like-box">
                                 <LikeOutlined/>
                                 {event.likeCount}
                             </div>
-                            <div className="comment-box">
+                            <div className="like-box">
                                 <CommentOutlined />
                                 {event.commentCount}
                             </div>

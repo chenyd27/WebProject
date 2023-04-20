@@ -12,6 +12,9 @@
 .avatar-detail-img{
     width: 8%;
 }
+.avatar-event-info-img{
+    width: 5%;
+}
 
 .hidden-box{
     display: none;

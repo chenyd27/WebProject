@@ -1,0 +1,23 @@
+.content{
+    display: block;
+    height: auto;
+    overflow: visible;
+    font-size: 17px;
+}
+.picture-box{
+    text-align: center;
+}
+.scroll-pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.img-box{
+    width: 100%;
+}
+.arow{
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
