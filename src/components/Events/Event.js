@@ -4,6 +4,8 @@ import { DownOutlined } from '@ant-design/icons';
 import './Event.css';
 import { Input,Button,Tag,Col,Row } from 'antd';
 import EventCard from "components/Card/EventCard";
+import EventLeft from "./EventLeft/EventLeft";
+import EventRight from "./EventRight/EventRight";
 
 function Event(){
     const [searchContent, setSearchContent] = useState('');
@@ -64,14 +66,14 @@ function Event(){
         {
             event_id : 1,
             title : 'test1',
-            content : 'The sun was setting over the horizon, casting a warm golden glow over the fields. The birds were settling in for the night, their chirps slowly fading away. The air was still, with only the occasional rustle of leaves in the wind. It was a peaceful scene, one that made you forget about the worries of the day. As the last rays of sunlight disappeared, the stars began to twinkle in the sky. It was a reminder that although the day may have ended, there was still beauty to be found in the world.',
+            content : 'The sun was setting over the horizon, casting a warm golden glow over the fields.',
             tagList : ['game','sport','scene','food'],
             user : {
                 user_id : 1,
                 username : 'cyd',
                 avatar : 'http://localhost:3000/assets/touxiang.png',
             },            
-            event_contain_picture : true,
+            event_contain_picture : false,
             coverUrl : 'https://cdn.glitch.global/0949e35b-594a-4e7d-8753-34bc4017c725/charutupian.png?v=1681916662872',
             createAt : '2023-4-19 09:20:00',
             commentCount : 10,
@@ -103,13 +105,15 @@ function Event(){
                 username : 'cyd',
                 avatar : 'http://localhost:3000/assets/touxiang.png',
             },
-            event_contain_picture : false,
+            event_contain_picture : true,
             coverUrl : 'https://cdn.glitch.global/0949e35b-594a-4e7d-8753-34bc4017c725/charutupian.png?v=1681916662872',
             createAt : '2023-4-19 09:00:00',
             commentCount : 10,
             likeCount : 10
         }
     ];
+    const eventLeft = eventList.filter(item => item.event_id % 2 === 0);
+    const eventRight = eventList.filter(item => item.event_id % 2 === 1);
     // useEffect to get all Events
 
     // submit search API
@@ -174,7 +178,8 @@ function Event(){
             </div>
             <div className="cardList">
                 <Row>
-                    {eventList.map(event => <Col key={event.event_id} span={12}><EventCard event={event} status={'home'}/></Col>)}
+                    <Col span={12}><EventLeft eventLeft={eventLeft}/></Col>
+                    <Col span={12}><EventRight eventRight={eventRight}/></Col>
                 </Row>
             </div>
         </div>

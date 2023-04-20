@@ -11,6 +11,7 @@ import Home from 'pages/home/Home';
 import Personal from 'pages/personal/Personal';
 import EventDetail from 'pages/eventDetail/EventDetail';
 import Post from 'pages/post/Post';
+import Message from 'pages/message/Message';
 
 function Layout(){
     return (
@@ -35,7 +36,7 @@ function App() {
               <Route path='' element={<Home/>}></Route>
               <Route path='info'></Route>
               <Route path='personal' element={<Personal/>}></Route>
-              <Route path='message'></Route>
+              <Route path='message' element={<Message/>}></Route>
               <Route path='post' element={<Post/>}></Route>
               <Route path='eventdetail/:id' element={<EventDetail/>}></Route>
             </Route>

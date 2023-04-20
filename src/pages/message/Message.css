@@ -1,0 +1,27 @@
+.total-home{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.subtopic-box{
+    display: flex;
+    width: 100%;
+}
+
+.post-box{
+    margin-right: 1%;
+}
+.post{
+    font-weight: bold;
+}
+
+.item{
+    font-size: 25px;
+    font-weight: bold;
+    margin-right: 5%;
+}
+
+.selected{
+    color: #05BFDB;
+}

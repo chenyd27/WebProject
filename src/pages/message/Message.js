@@ -1,12 +1,10 @@
 import React,{useState} from "react";
-import PersonalEvent from "components/Events/PersonalEvent";
-import Team from "../../components/Teams/Team";
 import { useNavigate } from "react-router-dom";
-import { Button } from 'antd';
-import { PlusCircleOutlined } from '@ant-design/icons';
-import './Personal.css';
+import './Message.css';
+import MessageEvent from "./MessageEvent/MessageEvent";
+import MessageTeam from "./MessageTeam/MessageTeam";
 
-function Personal(){
+function Message(){
     const [subPage , setSubPage] = useState('event');
     const navigate = useNavigate();
     const columns = [
@@ -22,6 +20,7 @@ function Personal(){
     const onClick = (e) =>{
         setSubPage(e.key);
     }
+    
     return (
         <div style={{marginLeft : '8%',marginRight : '8%'}}>
             <div className="total-home">
@@ -32,10 +31,10 @@ function Personal(){
             </div>
             <hr/>
             <div>
-                {subPage === 'event' ? <PersonalEvent/> : <Team/>}
+                {subPage === 'event' ? <MessageEvent/> : <MessageTeam/>}
             </div>
         </div>
     )
 }
 
-export default Personal;
+export default Message;

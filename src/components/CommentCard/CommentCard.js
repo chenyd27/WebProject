@@ -3,7 +3,9 @@ import React from "react";
 import './CommentCard.css';
 import { useSelector } from 'react-redux';
 import {  Dropdown } from 'antd';
-import { EllipsisOutlined   } from "@ant-design/icons"
+import { EllipsisOutlined,RightOutlined   } from "@ant-design/icons";
+import { useNavigate } from "react-router-dom";
+
 
 
 function CommentCard(props){
@@ -13,6 +15,7 @@ function CommentCard(props){
         username : comment.username,
         avatar : comment.user_avatar
     }
+    const navigate = useNavigate();
     // delete comment api
     const deleteComment = () => {
         needDeleted(comment.comment_id);
@@ -24,11 +27,15 @@ function CommentCard(props){
         }
       ];
     const {user} = useSelector(state => state.userInfo);
+    // jump to event detail api
+    const jumptoEvent = () =>{
+        if(props.status === 'message') navigate(`/eventdetail/${comment.event_id}`);
+    }
     return (
         <div>
             <div className="create-user">
                 <div className="user-info">
-                    <div className="avatar">
+                    <div className="avatar" onClick={jumptoEvent}>
                         <Avatar user={commentUser} status={2} title={commentUser.username} create_time={comment.comment_create_time}/>
                     </div>
                     {user.user_id === commentUser.user_id ? 
@@ -40,8 +47,10 @@ function CommentCard(props){
                     <div></div>}
                 </div>
             </div>
-            <div className="comment-content">
-                <p className="comment-box">{comment.comment}</p>
+            <div className="comment-content"  onClick={jumptoEvent}>
+                <div className="comment-box">
+                    <div style={{marginRight:10}}><RightOutlined /></div>
+                    {comment.comment}</div>
             </div>
             <hr/>
         </div>

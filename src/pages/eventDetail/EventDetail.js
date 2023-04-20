@@ -24,7 +24,7 @@ function EventDetail(){
         coverUrl : 'https://cdn.glitch.global/0949e35b-594a-4e7d-8753-34bc4017c725/charutupian.png?v=1681916662872',
         pictureList : ['https://cdn.glitch.global/0949e35b-594a-4e7d-8753-34bc4017c725/charutupian.png?v=1681916662872','https://cdn.glitch.global/0949e35b-594a-4e7d-8753-34bc4017c725/charutupian.png?v=1681916662872'],
         createAt : '2023-4-19 09:30:00',
-        commentCount : 3,
+        commentCount : 6,
         commentList : [
             {
                 comment_id : 0,
@@ -32,7 +32,8 @@ function EventDetail(){
                 user_id : 1,
                 user_avatar : 'http://localhost:3000/assets/touxiang.png',
                 comment : 'Test comment',
-                comment_create_time : '2023-09-19 20:00:00'
+                comment_create_time : '2023-09-19 20:00:00',
+                event_id : 0
             },
             {
                 comment_id : 1,
@@ -40,7 +41,8 @@ function EventDetail(){
                 user_id : 2,
                 user_avatar : 'http://localhost:3000/assets/touxiang.png',
                 comment : 'Test comment',
-                comment_create_time : '2023-09-19 20:00:00'
+                comment_create_time : '2023-09-19 20:00:00',
+                event_id : 0
             },
             {
                 comment_id : 2,
@@ -48,7 +50,8 @@ function EventDetail(){
                 user_id : 1,
                 user_avatar : 'http://localhost:3000/assets/touxiang.png',
                 comment : 'Test comment',
-                comment_create_time : '2023-09-19 20:00:00'
+                comment_create_time : '2023-09-19 20:00:00',
+                event_id : 0
             },
             {
                 comment_id : 3,
@@ -56,7 +59,8 @@ function EventDetail(){
                 user_id : 1,
                 user_avatar : 'http://localhost:3000/assets/touxiang.png',
                 comment : 'Test comment',
-                comment_create_time : '2023-09-19 20:00:00'
+                comment_create_time : '2023-09-19 20:00:00',
+                event_id : 0
             },
             {
                 comment_id : 4,
@@ -64,7 +68,8 @@ function EventDetail(){
                 user_id : 1,
                 user_avatar : 'http://localhost:3000/assets/touxiang.png',
                 comment : 'Test comment',
-                comment_create_time : '2023-09-19 20:00:00'
+                comment_create_time : '2023-09-19 20:00:00',
+                event_id : 0
             },
             {
                 comment_id : 5,
@@ -72,7 +77,8 @@ function EventDetail(){
                 user_id : 1,
                 user_avatar : 'http://localhost:3000/assets/touxiang.png',
                 comment : 'Test comment',
-                comment_create_time : '2023-09-19 20:00:00'
+                comment_create_time : '2023-09-19 20:00:00',
+                event_id : 0
             }
         ],
         likeCount : 10

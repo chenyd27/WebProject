@@ -4,9 +4,11 @@
     align-items: center;
 }
 .comment-box{
-    display: block;
+    display: flex;
     height: auto;
     overflow: visible;
     font-size: 15px;
     margin-left: 7%;
+    margin-top: 1%;
+    font-size: 15px;
 }
